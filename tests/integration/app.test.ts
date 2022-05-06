@@ -1,5 +1,5 @@
-import app from '../../src/app.js';
 import supertest from 'supertest';
+import app from '../../src/app.js';
 
 // beforeEach()
 
@@ -16,7 +16,5 @@ describe('POST /recommendations', () => {
     expect(result.status).toEqual(201);
 
     // const duplicated = await supertest(app).post('/recommendations').send(newMusic);
-    
   });
 });
-

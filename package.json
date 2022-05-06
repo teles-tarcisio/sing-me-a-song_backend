@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "npx nodemon src/server.ts",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest -i"
@@ -19,8 +19,12 @@
     "@types/joi": "^17.2.3",
     "@types/node": "^16.3.3",
     "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
     "dotenv-cli": "^5.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "^28.1.0",
     "nodemon": "^2.0.12",
     "prisma": "^3.13.0",
