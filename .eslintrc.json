@@ -5,7 +5,9 @@
         "jest/globals": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin : import/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -13,7 +15,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "jest"
     ],
     "settings": {
         "import/extensions": [
@@ -22,7 +25,7 @@
         ]
     },
     "rules": {
-        "linebreak-style":"warn",
+        "linebreak-style": "off",
         "import/extensions" : [
             "error",
             "always",
