@@ -2,6 +2,7 @@
 import supertest from 'supertest';
 import app from '../../src/app.js';
 import { prisma } from '../../src/database.js';
+import { main as seedDatabase } from '../../prisma/seed.js';
 
 beforeAll(async () => {
   await prisma.$executeRaw`TRUNCATE TABLE recommendations RESTART IDENTITY CASCADE;`;
@@ -58,7 +59,20 @@ describe('POST /recommendations', () => {
     expect(lastDownvoted.score).toEqual(score - 1);
   });
 
-  it.todo('get last 10 recommendations');
+  it('should succesfully get the "top 10" recommendations', async () => {
+    await seedDatabase()
+      .catch((e) => {
+        console.log(e);
+        process.exit(1);
+      })
+      .finally(async () => {
+        await prisma.$disconnect();
+      });
+
+    const topTen = await supertest(app).get('/recommendations');
+    expect(topTen.body.length).toEqual(10);
+  });
+
   it.todo('get recommendation by id');
   it.todo('get X recommendations sorted by score');
   it.todo('get recommendation randomly');
