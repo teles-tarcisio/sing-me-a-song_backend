@@ -83,6 +83,7 @@ describe('POST /recommendations', () => {
   it('should get Y recommendations sorted by score', async () => {
     const quantity = 6;
     const result = await supertest(app).get(`/recommendations/top/${quantity}`);
+
     expect(result.body.length).toEqual(6);
     console.log(result.body);
 

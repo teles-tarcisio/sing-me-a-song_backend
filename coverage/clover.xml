@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652115494495" clover="3.2.0">
-  <project timestamp="1652115494495" name="All files">
-    <metrics statements="115" coveredstatements="75" conditionals="30" coveredconditionals="6" methods="40" coveredmethods="25" elements="185" coveredelements="106" complexity="0" loc="115" ncloc="115" packages="9" files="14" classes="14"/>
+<coverage generated="1652121870483" clover="3.2.0">
+  <project timestamp="1652121870483" name="All files">
+    <metrics statements="115" coveredstatements="77" conditionals="30" coveredconditionals="11" methods="40" coveredmethods="26" elements="185" coveredelements="114" complexity="0" loc="115" ncloc="115" packages="9" files="14" classes="14"/>
     <package name="prisma">
       <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
       <file name="seed.ts" path="/home/tarcisio/Documents/bootcampDriven/projetos/sing-me-a-song/back-end/prisma/seed.ts">
@@ -131,21 +131,21 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="31" coveredstatements="15" conditionals="6" coveredconditionals="1" methods="10" coveredmethods="6"/>
+      <metrics statements="31" coveredstatements="16" conditionals="6" coveredconditionals="3" methods="10" coveredmethods="6"/>
       <file name="recommendationsService.ts" path="/home/tarcisio/Documents/bootcampDriven/projetos/sing-me-a-song/back-end/src/services/recommendationsService.ts">
-        <metrics statements="29" coveredstatements="14" conditionals="6" coveredconditionals="1" methods="9" coveredmethods="6"/>
+        <metrics statements="29" coveredstatements="15" conditionals="6" coveredconditionals="3" methods="9" coveredmethods="6"/>
         <line num="8" count="2" type="stmt"/>
         <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="3" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="4" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
         <line num="51" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -171,9 +171,9 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="10" coveredstatements="1" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
+      <metrics statements="10" coveredstatements="2" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
       <file name="errorUtils.ts" path="/home/tarcisio/Documents/bootcampDriven/projetos/sing-me-a-song/back-end/src/utils/errorUtils.ts">
-        <metrics statements="10" coveredstatements="1" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
+        <metrics statements="10" coveredstatements="2" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
         <line num="8" count="0" type="stmt"/>
         <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -181,7 +181,7 @@
         <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="3" falsecount="1"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="24" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="32" count="0" type="cond" truecount="0" falsecount="4"/>
       </file>
