@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "NODE_ENV=test npx nodemon src/server.ts",
-    "test": "dotenv -e .env.test prisma db seed && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i",
+    "test": "NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i -- --coverage",
+    "test:with-seed": "dotenv -e .env.test prisma db seed && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i",
     "migrate:testdb": "dotenv -e .env.test npx prisma migrate dev",
     "studio:testdb": "dotenv -e .env.test npx prisma studio",
     "seed:testdb": "dotenv -e .env.test prisma db seed"
@@ -41,6 +42,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@jest/globals": "^28.1.0",
     "@prisma/client": "^3.13.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

@@ -73,7 +73,29 @@ describe('POST /recommendations', () => {
     expect(topTen.body.length).toEqual(10);
   });
 
-  it.todo('get recommendation by id');
-  it.todo('get X recommendations sorted by score');
+  it('should successfully get recommendation by id', async () => {
+    const targetId = 9;
+    const recommendation = await supertest(app).get(`/recommendations/${targetId}`);
+    expect(recommendation.body.id === targetId);
+    expect(recommendation.body.score > 1);
+  });
+
+  it('should get Y recommendations sorted by score', async () => {
+    const quantity = 6;
+    const result = await supertest(app).get(`/recommendations/top/${quantity}`);
+    expect(result.body.length).toEqual(6);
+    console.log(result.body);
+
+    let sorted = true;
+    const targetArray = result.body;
+    for (let i = 0; i < targetArray.length - 1; i++) {
+      if (targetArray[i].score < targetArray[i + 1].score) {
+        sorted = false;
+        break;
+      }
+    };
+    expect(sorted).toEqual(true);
+  });
+
   it.todo('get recommendation randomly');
 });
