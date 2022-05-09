@@ -45,7 +45,19 @@ describe('POST /recommendations', () => {
     expect(lastUpvoted.score).toEqual(score + 1);
   });
 
-  it.todo('downvote a recommendation');
+  it('should successfully downvote a video', async () => {
+    const { id, score } = await prisma.recommendation.findUnique({
+      where: { name: newMusic.name },
+    });
+
+    const result = await supertest(app).post(`/recommendations/${id}/downvote`);
+    expect(result.status).toEqual(200);
+    const lastDownvoted = await prisma.recommendation.findUnique({
+      where: { name: newMusic.name },
+    });
+    expect(lastDownvoted.score).toEqual(score - 1);
+  });
+
   it.todo('get last 10 recommendations');
   it.todo('get recommendation by id');
   it.todo('get X recommendations sorted by score');
