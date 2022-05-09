@@ -68,7 +68,7 @@ const seedArray = [
   },
 ];
 
-async function main() {
+export async function main() {
   await prisma.$executeRaw`TRUNCATE TABLE recommendations RESTART IDENTITY CASCADE;`;
 
   seedArray.forEach(async (music) => {
@@ -84,11 +84,11 @@ async function main() {
   });
 }
 
-  main()
-    .catch((e) => {
-      console.log(e);
-      process.exit(1);
-    })
-    .finally(async () => {
-      await prisma.$disconnect();
-    });
+main()
+  .catch((e) => {
+    console.log(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
